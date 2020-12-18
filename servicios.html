@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Productos</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+   
+     <!-- Include Dexie -->
+     <script src="js/dexie.js"></script>
+
+     <script>
+         //
+         // Define your database
+         //
+        /* var db = new Dexie("shop_database");
+         db.version(1).stores({
+             products: '++id,name,shoeSize'
+         });
+
+         //
+         // Put some data into it
+         //
+         db.products.add({name: "Nicolas", shoeSize: 8}).then (function(){
+             //
+             // Then when data is stored, read from it
+             //
+             return db.products.get({name:'Nicolas'});
+         }).then(function (product) {
+             //
+             // Display the result
+             //
+             alert ("Nicolas has shoe size " + product.shoeSize);
+         }).catch(function(error) {
+            //
+            // Finally don't forget to catch any error
+            // that could have happened anywhere in the
+            // code blocks above.
+            //
+            alert ("Ooops: " + error);
+         }); */
+     </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="titulo">
+                <h1><span class="highlight">TIENDA</span> DE PRODUCTOS</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">INICIO</a>
+                    </li>
+                    <li class="current">
+                        <a href="servicios.html">SERVICIOS</a>
+                    </li>
+                    <li>
+                        <a href="acerca.html">ACERCA</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="muestra">
+        <div class="container">
+            <h1>Una Tienda de Productos Web</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dignissimos vero et commodi obcaecati itaque quasi recusandae a quas fugit dolorem, neque dolore harum ex adipisci blanditiis rerum! Praesentium, ullam.</p>
+        </div>
+    </section>
+
+    <section id="noticias">
+        <div class="container">
+            <h1>Agregar Productos</h1>
+            <form  id="form-product">
+                <input type="text" name="nombre" id="nombre" placeholder="Producto">
+                <input type="number" name="precio" id="precio" placeholder="10">
+                <input type="file" id="foto" >
+                <button type="submit" class="button_1" id="agregar">Agregar</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="cajas">
+        <div class="container">
+            <div class="swiper-container">
+                <div class="swiper-wrapper" id="products_list">
+                  <!--  <div class="swiper-slide">
+                        <div class="slider-box">
+                            <p class="time">Nuevo</p>
+                            <div class="img-box">
+                                <img src="img/1.png">
+                            </div>
+                            <p class="detail">Parrafo de relleno
+                                <a href="#" class="price">Price-40$</a>
+                            </p>
+                            <div class="cart">
+                                <a href="#">Agregar al Carrito</a>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>TIENDA DE PRODUCTOS, Copyright &copy; 2020</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
