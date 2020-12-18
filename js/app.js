@@ -24,10 +24,10 @@ class Product {
 
 class UI  {
     addProduct() {
-        const product_list = document.getElementById("products_list");
+        
         db.products.each(product => {
-            console.log(product.nombre);
-            product_list.innerHTML += `
+            //console.log(product.nombre);
+            swiper.appendSlide(`
             <div class="swiper-slide">
             <div class="slider-box">
                 <p class="time">Nuevo</p>
@@ -41,7 +41,7 @@ class UI  {
                     <a href="#">Agregar al Carrito</a>
                 </div>
             </div>
-            </div>`;
+            </div>`);
 
             
         });
@@ -54,10 +54,10 @@ class UI  {
     }
 
     showProducts() {
-        const product_list = document.getElementById("products_list");
+        
         db.products.each(product => {
-            console.log(product.nombre);
-            product_list.innerHTML += `
+            //console.log(product.nombre);
+            swiper.appendSlide(`
             <div class="swiper-slide">
             <div class="slider-box">
                 <p class="time">Nuevo</p>
@@ -71,38 +71,27 @@ class UI  {
                     <a href="#">Agregar al Carrito</a>
                 </div>
             </div>
-            </div>`;
+            </div>`);
             
         });
     }
 }
 
 
-var mySwiper = new Swiper('.swiper-container', {
+const swiper = new Swiper('.swiper-container', {
     // Optional parameters
     direction: 'horizontal',
-    freeMode: false,
-    loop: true,
-    slidesPerView: 5,
-    spaceBetween: 100,
-  
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true,
-    },
-  
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
+    slidesPerView: 3,
+      //centeredSlides: true,
+      spaceBetween: 30,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
   });
 
 const toBase64 = file => new Promise((resolve, reject) => {

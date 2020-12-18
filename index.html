@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda de Productos</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
-    
-     <!-- Include Dexie -->
-     <script src="js/dexie.js"></script>
 
-     <script>
+    <!-- Include Dexie -->
+    <script src="js/dexie.js"></script>
+
+    <script>
          //
          // Define your database
          //
@@ -40,8 +41,9 @@
             //
             alert ("Ooops: " + error);
          }); */
-     </script>
+    </script>
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -67,7 +69,9 @@
     <section id="muestra">
         <div class="container">
             <h1>Una Tienda de Productos Web</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dignissimos vero et commodi obcaecati itaque quasi recusandae a quas fugit dolorem, neque dolore harum ex adipisci blanditiis rerum! Praesentium, ullam.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dignissimos vero et commodi obcaecati
+                itaque quasi recusandae a quas fugit dolorem, neque dolore harum ex adipisci blanditiis rerum!
+                Praesentium, ullam.</p>
         </div>
     </section>
 
@@ -85,9 +89,13 @@
         <div class="container">
             <div class="swiper-container">
                 <div class="swiper-wrapper" id="products_list">
-                  
+
                 </div>
-                
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
         </div>
     </section>
@@ -97,17 +105,7 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-        var swiperNodes = "";
-        var pagination = '<div class=swiper-pagination></div>';
-        var next_prev_buttons = '<div class="swiper-button-prev"></div><div class="swiper-button-next"></div>'; 
-        var scrollbar = '<div class="swiper-scrollbar"></div>';
-        var swiperNodes = swiperNodes.concat(pagination, next_prev_buttons);
-        /* loop throw all swipers on the page */
-        $('.swiper-container').each(function( index ) {
-          $( this ).append(swiperNodes);
-        });
-      </script>
     <script src="js/app.js"></script>
 </body>
+
 </html>
